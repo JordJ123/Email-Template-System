@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import gui.components.ExtendedTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="hBox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="5.0" stylesheets="@/org/kordamp/bootstrapfx/bootstrapfx.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.screens.tags.ListTagBoxTextFieldController">
+   <children>
+      <ExtendedTextField fx:id="listTagValueTextField" style="-fx-font-size: 14;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </ExtendedTextField>
+      <Button fx:id="upButton" mnemonicParsing="false" onAction="#onUpButton" text="↑">
+         <styleClass>
+            <String fx:value="btn-sm" />
+            <String fx:value="btn-primary" />
+         </styleClass></Button>
+      <Button fx:id="downButton" mnemonicParsing="false" onAction="#onDownButton" text="↓">
+         <styleClass>
+            <String fx:value="btn-sm" />
+            <String fx:value="btn-primary" />
+         </styleClass></Button>
+      <Button mnemonicParsing="false" onAction="#onRemoveButton" text="-">
+         <styleClass>
+            <String fx:value="btn-sm" />
+            <String fx:value="btn-danger" />
+         </styleClass>
+      </Button>
+   </children>
+</HBox>

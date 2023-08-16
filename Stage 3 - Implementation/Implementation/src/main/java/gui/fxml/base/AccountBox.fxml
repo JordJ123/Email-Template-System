@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import gui.components.ExtendedTextField?>
+<?import gui.components.ExtendedVBox?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<ExtendedVBox fx:id="accountBox" onContextMenuRequested="#onContextMenu" onMouseClicked="#onAccountBoxButton" onMouseEntered="#onHoverEnter" onMouseExited="#onHoverExit" styleClass="bg-primary" stylesheets="@/org/kordamp/bootstrapfx/bootstrapfx.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.fxml.base.AccountBoxController">
+   <children>
+      <StackPane alignment="CENTER_LEFT">
+         <children>
+            <Label fx:id="nicknameLabel" styleClass="h2" text="Nickname" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.10084056854248" />
+               </font>
+               <contextMenu>
+                  <ContextMenu fx:id="contextMenu" style="-fx-font-size: 14; -fx-background-color: #ffffff;">
+                     <items>
+                        <MenuItem fx:id="nicknameItem" mnemonicParsing="false" onAction="#onChangeNicknameContextMenuAction" text="Change Nickname" />
+                        <MenuItem fx:id="logoutItem" mnemonicParsing="false" onAction="#onLogoutContextMenuAction" text="Logout" />
+                     </items>
+                  </ContextMenu>
+               </contextMenu>
+            </Label>
+            <HBox fx:id="nicknameBox" alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="5.0" styleClass="bg-primary" visible="false">
+               <children>
+                  <ExtendedTextField fx:id="nicknameTextField" characterLimit="16" />
+                  <Button fx:id="nicknameAcceptButton" mnemonicParsing="false" onAction="#onNicknameBoxAcceptButton">
+                     <styleClass>
+                        <String fx:value="btn-sm" />
+                        <String fx:value="btn-success" />
+                     </styleClass>
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="nicknameCancelButton" mnemonicParsing="false" onAction="#onNicknameBoxCancelButton">
+                     <styleClass>
+                        <String fx:value="btn-sm" />
+                        <String fx:value="btn-danger" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </StackPane>
+      <Label fx:id="emailAddressLabel" styleClass="h5" text="Email Address" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.10084056854248" />
+         </font>
+      </Label>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+   </padding>
+</ExtendedVBox>

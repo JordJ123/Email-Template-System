@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import gui.components.ExtendedPasswordField?>
+<?import gui.components.ExtendedTextField?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane style="-fx-background-color: #FFFFFF;" stylesheets="@/org/kordamp/bootstrapfx/bootstrapfx.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.screens.login.LoginScreenController">
+   <center>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Label styleClass="text-primary" text="Email Address">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <ExtendedTextField fx:id="emailAddressTextField" characterLimit="320" style="-fx-font-size: 14;">
+                     <font>
+                        <Font size="14.0" />
+                     </font></ExtendedTextField>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Label styleClass="text-primary" text="Application Password">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <ExtendedPasswordField fx:id="applicationPasswordHiddenTextField" characterLimit="16" style="-fx-font-size: 14;">
+                     <font>
+                        <Font size="14.0" />
+                     </font></ExtendedPasswordField>
+                  <ExtendedTextField fx:id="applicationPasswordVisibleTextField" style="-fx-font-size: 14;">
+                     <font>
+                        <Font size="14.0" />
+                     </font></ExtendedTextField>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <CheckBox fx:id="showPasswordCheckBox" mnemonicParsing="false" style="col: #FFFFFF; -fx-font-size: 14;" styleClass="text-primary" text="Show Password">
+                     <font>
+                        <Font size="14.0" />
+                     </font></CheckBox>
+                  <CheckBox fx:id="rememberMeCheckBox" mnemonicParsing="false" style="-fx-font-size: 14;" styleClass="text-primary" text="Remember Me">
+                     <font>
+                        <Font size="14.0" />
+                     </font></CheckBox>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label fx:id="errorLabel" textFill="RED">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+   <bottom>
+      <HBox alignment="CENTER_RIGHT" spacing="10.0" BorderPane.alignment="CENTER_RIGHT">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <children>
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#onBackButton" text="Back">
+               <styleClass>
+                  <String fx:value="btn" />
+                  <String fx:value="btn-primary" />
+               </styleClass>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="loginButton" mnemonicParsing="false" onAction="#onLoginButton" text="Login">
+               <styleClass>
+                  <String fx:value="btn" />
+                  <String fx:value="btn-primary" />
+               </styleClass>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

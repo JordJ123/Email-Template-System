@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="tagBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0" stylesheets="@/org/kordamp/bootstrapfx/bootstrapfx.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.screens.create.TagBoxController">
+   <children>
+      <Button fx:id="insertButton" mnemonicParsing="false" onAction="#onTagButton" text="Tag">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <styleClass>
+            <String fx:value="btn-primary" />
+            <String fx:value="btn-sm" />
+         </styleClass></Button>
+      <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#onDeleteButton" text="X">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <styleClass>
+            <String fx:value="btn-danger" />
+            <String fx:value="btn-sm" />
+         </styleClass></Button>
+   </children>
+</HBox>

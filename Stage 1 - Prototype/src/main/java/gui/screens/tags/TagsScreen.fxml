@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane style="-fx-background-color: #ffffff;" stylesheets="@/org/kordamp/bootstrapfx/bootstrapfx.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.screens.tags.TagsScreenController">
+   <top>
+      <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <ComboBox fx:id="emailAddressComboBox" onAction="#onEmailAddressComboBox" style="-fx-font-size: 14; -fx-background-color: #ffffff;">
+               <styleClass>
+                  <String fx:value="btn-sm" />
+                  <String fx:value="btn-primary" />
+               </styleClass></ComboBox>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </top>
+   <center>
+      <VBox fx:id="tagBoxes" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets left="10.0" right="10.0" top="5.0" />
+         </padding>
+      </VBox>
+   </center>
+   <bottom>
+      <VBox alignment="TOP_CENTER" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="errorLabel" textFill="RED">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <HBox alignment="CENTER_RIGHT" spacing="10.0">
+               <children>
+                  <Button fx:id="sendButton" mnemonicParsing="false" onAction="#onSendButton" text="Send">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btn-primary" />
+                     </styleClass></Button>
+                  <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#onCancelButton" text="Cancel">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btn-primary" />
+                     </styleClass></Button>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" />
+         </padding>
+      </VBox>
+   </bottom>
+</BorderPane>

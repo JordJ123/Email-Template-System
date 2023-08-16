@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import gui.components.ExtendedPasswordField?>
+<?import gui.components.ExtendedTextField?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="25.0" style="-fx-background-color: #FFFFFF;" stylesheets="@/org/kordamp/bootstrapfx/bootstrapfx.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.fxml.login.LoginScreenController">
+   <children>
+      <HBox alignment="CENTER_LEFT" spacing="20.0">
+         <children>
+            <Label style="-fx-font-size: 24;" styleClass="h3" text="Email Address">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ExtendedTextField fx:id="emailAddressTextField" characterLimit="320" prefWidth="500.0" style="-fx-font-size: 24;" styleClass="h3">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </ExtendedTextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" spacing="20.0">
+         <children>
+            <Label style="-fx-font-size: 24;" styleClass="h3" text="Email Password">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ExtendedPasswordField fx:id="passwordHiddenTextField" characterLimit="32" prefWidth="500.0" promptText="Might need an application password" style="-fx-font-size: 24;" styleClass="h3">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </ExtendedPasswordField>
+            <ExtendedTextField fx:id="passwordVisibleTextField" characterLimit="32" prefWidth="500.0" promptText="Might need an application password" style="-fx-font-size: 24;" styleClass="h3">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </ExtendedTextField>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" spacing="20.0">
+         <children>
+            <CheckBox fx:id="showPasswordCheckBox" mnemonicParsing="false" onMouseEntered="#onHoverEnter" onMouseExited="#onHoverExit" style="-fx-font-size: 22;" styleClass="h3" text="Show Password">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </CheckBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" spacing="20.0">
+         <children>
+            <Label style="-fx-font-size: 24;" styleClass="h3" text="Account Type">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="emailServiceComboBox" maxWidth="1.7976931348623157E308" onAction="#onEmailServiceComboBox" style="-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-font-size: 24;">
+               <styleClass>
+                  <String fx:value="btn-primary" />
+                  <String fx:value="btn-sm" />
+               </styleClass></ComboBox>
+         </children>
+      </HBox>
+      <VBox fx:id="smtpImapBox" spacing="25.0" visible="false">
+         <children>
+            <HBox alignment="CENTER_LEFT" spacing="20.0">
+               <children>
+                  <Label style="-fx-font-size: 24;" styleClass="h3" text="SMTP">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ExtendedTextField fx:id="smtpTextField" characterLimit="320" prefWidth="500.0" style="-fx-font-size: 24;" styleClass="h3">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </ExtendedTextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="20.0">
+               <children>
+                  <Label style="-fx-font-size: 24;" styleClass="h3" text="IMAP">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ExtendedTextField fx:id="imapTextField" characterLimit="320" prefWidth="500.0" style="-fx-font-size: 24;" styleClass="h3">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </ExtendedTextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="20.0">
+               <children>
+                  <Label style="-fx-font-size: 14;" styleClass="h3" text="(Please search for the correct SMTP and IMAP hostnames for the email service provider you wish to login an account for)">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER_LEFT" spacing="20.0">
+         <children>
+            <Button fx:id="loginButton" mnemonicParsing="false" onAction="#onLoginButton" onMouseEntered="#onHoverEnter" onMouseExited="#onHoverExit" style="-fx-font-size: 24; -fx-padding: 7px 21px 7px 21px;" text="Login">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="btn-lg" />
+                  <String fx:value="btn-primary" />
+               </styleClass>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" spacing="20.0" styleClass="h3">
+         <children>
+            <Label fx:id="errorLabel" style="-fx-font-size: 24;" textFill="RED">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+   </padding>
+</VBox>

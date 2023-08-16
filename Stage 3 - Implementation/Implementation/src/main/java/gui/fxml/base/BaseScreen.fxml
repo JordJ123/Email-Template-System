@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import gui.components.ExtendedLabel?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane stylesheets="@/org/kordamp/bootstrapfx/bootstrapfx.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.fxml.base.BaseScreenController">
+   <left>
+      <VBox maxWidth="1.7976931348623157E308" spacing="10.0" styleClass="bg-primary" BorderPane.alignment="CENTER">
+         <children>
+            <VBox VBox.vgrow="ALWAYS">
+               <children>
+                  <Label maxWidth="1.7976931348623157E308" style="-fx-font-weight: bold; -fx-font-family: Calibri;" styleClass="h1" text="Accounts" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.10084056854248" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" maxWidth="-Infinity" prefWidth="203.0" styleClass="bg-primary" vbarPolicy="NEVER">
+                     <content>
+                        <VBox styleClass="bg-primary">
+                           <children>
+                              <VBox fx:id="accountsBox" />
+                              <ExtendedLabel fx:id="loginScreenButton" maxWidth="1.7976931348623157E308" onMouseClicked="#onLoginButton" onMouseEntered="#onHoverEnter" onMouseExited="#onHoverExit" styleClass="h2" text="+ Login">
+                                 <padding>
+                                    <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                 </padding>
+                              </ExtendedLabel>
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </children></VBox>
+            <VBox fx:id="optionsBox" disable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+               <children>
+                  <Label maxWidth="1.7976931348623157E308" style="-fx-font-weight: bold;" styleClass="h1" text="Options" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.10084056854248" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                  </Label>
+                  <ExtendedLabel fx:id="createButton" maxWidth="1.7976931348623157E308" onMouseClicked="#onCreateButton" onMouseEntered="#onHoverEnter" onMouseExited="#onHoverExit" styleClass="h2" text="Create" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ExtendedLabel>
+                  <ExtendedLabel fx:id="defaultInboxButton" maxWidth="1.7976931348623157E308" onMouseClicked="#onDefaultInboxButton" onMouseEntered="#onHoverEnter" onMouseExited="#onHoverExit" styleClass="h2" text="Inbox" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ExtendedLabel>
+                  <ExtendedLabel fx:id="draftsInboxButton" maxWidth="1.7976931348623157E308" onMouseClicked="#onDraftsInboxButton" onMouseEntered="#onHoverEnter" onMouseExited="#onHoverExit" styleClass="h2" text="Drafts" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ExtendedLabel>
+                  <ExtendedLabel fx:id="sentInboxButton" maxWidth="1.7976931348623157E308" onMouseClicked="#onSentInboxButton" onMouseEntered="#onHoverEnter" onMouseExited="#onHoverExit" styleClass="h2" text="Sent" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ExtendedLabel>
+                  <ExtendedLabel fx:id="spamInboxButton" maxWidth="1.7976931348623157E308" onMouseClicked="#onSpamInboxButton" onMouseEntered="#onHoverEnter" onMouseExited="#onHoverExit" styleClass="h2" text="Spam" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ExtendedLabel>
+                  <ExtendedLabel fx:id="binInboxButton" maxWidth="1.7976931348623157E308" onMouseClicked="#onBinInboxButton" onMouseEntered="#onHoverEnter" onMouseExited="#onHoverExit" styleClass="h2" text="Bin" textFill="WHITE">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ExtendedLabel>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding></VBox>
+   </left>
+   <center>
+      <HBox fx:id="screenSpace" fillHeight="false" maxWidth="1.7976931348623157E308" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
